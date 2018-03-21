@@ -20,6 +20,26 @@ namespace RedW.Migrations
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
 
+            modelBuilder.Entity("RedW.Model.Customer.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Bz");
+
+                    b.Property<string>("CName");
+
+                    b.Property<DateTime?>("CooperationEnd");
+
+                    b.Property<DateTime?>("CooperationStart");
+
+                    b.Property<int>("Uid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customer");
+                });
+
             modelBuilder.Entity("RedW.Model.Product.Prices", b =>
                 {
                     b.Property<int>("Id")

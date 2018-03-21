@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RedW.Model.Customer;
 using RedW.Model.Product;
 using RedW.Model.User;
 using System;
@@ -16,6 +17,7 @@ namespace RedW
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Prices> Prices { get; set; }
+        public DbSet<Customer> Customer { get; set; }
         public MyDbContext(DbContextOptions<MyDbContext> options):base(options)
         {
 

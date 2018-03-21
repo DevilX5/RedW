@@ -43,7 +43,6 @@ namespace RedW.Controllers
         {
             //var entity =await _context.TestTables.FindAsync(id);
             //entity.Name = value;
-            //var test = new TestTable() { Id = id, Name = value };
             _context.TestTables.Update(o);
             await _context.SaveChangesAsync();
         }

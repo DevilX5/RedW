@@ -18,7 +18,14 @@ namespace RedW
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        //WebHost.CreateDefaultBuilder(args)
+        //    .UseKestrel()
+        //    .UseContentRoot(Directory.GetCurrentDirectory())
+        //    .UseIISIntegration()
+        //    .UseUrls("http://localhost:80")
+        //    .UseStartup<Startup>()
+        //    .Build();
+        WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
     }

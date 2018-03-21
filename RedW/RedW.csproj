@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20180309080017_Day1.cs" />
     <Compile Remove="Migrations\20180309080017_Day1.Designer.cs" />
+    <Compile Remove="Migrations\20180312062134_Day2.cs" />
+    <Compile Remove="Migrations\20180312062134_Day2.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.1" />
   </ItemGroup>
 

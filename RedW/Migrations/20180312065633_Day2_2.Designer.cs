@@ -11,8 +11,8 @@ using System;
 namespace RedW.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20180309081900_Day1_1")]
-    partial class Day1_1
+    [Migration("20180312065633_Day2_2")]
+    partial class Day2_2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,12 +21,32 @@ namespace RedW.Migrations
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
 
+            modelBuilder.Entity("RedW.Model.Customer.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Bz");
+
+                    b.Property<string>("CName");
+
+                    b.Property<DateTime?>("CooperationEnd");
+
+                    b.Property<DateTime?>("CooperationStart");
+
+                    b.Property<int>("Uid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customer");
+                });
+
             modelBuilder.Entity("RedW.Model.Product.Prices", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Pirce");
+                    b.Property<decimal>("Pirce");
 
                     b.Property<string>("ProId");
 
